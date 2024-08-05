@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+      
+
+     
+      <h5 class="mb-3">Edit your Posts</h5>
+      <form action="/update/<%= post._id %>" method="post">
+        <textarea
+          placeholder="What's on your mind"
+          class="w-2/4 resize-none bg-transparent border-2 border-zinc-800 rounded-md"
+          name="content"
+          aria-label="New post content"
+        ><%= post.content %></textarea>
+        <input
+          type="submit"
+          class="p-2 bg-yellow-300 text-sm block rounded-md mt-2"
+          value="Update the Post"
+        />
+      </form>
+    </div>
+  </body>
+</html>
